@@ -1,0 +1,67 @@
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(0, 153, 255);
+    text-shadow: 0 0 80px rgba(162, 0, 255, 0.5);
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgb(255, 0, 0), transparent);
+    transition: all 0.5s ease;
+    transform: translateX(-50%);
+}
+
+h1:hover::after {
+    width: 80%;
+}
+
+p {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.carta {
+    position: fixed;
+    font-size: 30px;
+    animation: voarCarta 10s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes voarCarta {
+    from {
+        transform: translateX(100vw) rotate(0deg);
+    }
+    to {
+        transform: translateX(-100px) rotate(360deg);
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(140, 0, 255);
+}
